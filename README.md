@@ -13,7 +13,7 @@
 - 💻 I am interested in **Frontend Development** and **UI/UX Design**
 - 🌱 I am currently learning **ReactJS, JavaScript, and modern web development**
 - 🚀 My goal is to become a professional **Frontend Developer**
-- 📫 How to reach me: **your-email@gmail.com**
+- 📫 How to reach me: **baophong2602@gmail.com**
 - ⚡ Fun fact: I love building clean and user-friendly interfaces
 
 ---

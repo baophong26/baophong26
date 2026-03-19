@@ -189,7 +189,6 @@ img {
     border-radius: 50px;
     font-weight: 600;
     font-size: 1rem;
-    cursor: pointer;
     transition: var(--transition-medium);
     border: none;
     font-family: var(--font-body);
@@ -837,7 +836,6 @@ footer {
     .hamburger {
         display: block;
         font-size: 1.5rem;
-        cursor: pointer;
         z-index: 1001;
     }
     
@@ -893,7 +891,6 @@ footer {
 ================================= */
 @media (min-width: 992px) {
     body, a, button, .btn, .skill-card, .project-card, .contact-card, .social-links a {
-        cursor: none !important;
     }
 
     .custom-cursor {

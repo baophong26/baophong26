@@ -972,3 +972,61 @@ footer {
     position: relative;
     z-index: 1;
 }
+
+/* =================================
+   Preloader Component
+================================= */
+.preloader {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-primary);
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), visibility 0.8s;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-title {
+    font-size: 4rem;
+    font-family: var(--font-heading);
+    letter-spacing: -1px;
+    margin-bottom: 2.5rem;
+    color: var(--text-primary);
+}
+
+.preloader-title span {
+    color: var(--accent-1);
+    background: linear-gradient(135deg, var(--accent-1), var(--accent-3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.progress-bar-container {
+    width: 250px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
+    transition: width 0.1s ease-out;
+}
+
+/* Typewriter cursor blink */
+.blinking-cursor {
+    animation: blink 1.2s step-end infinite;
+    font-weight: 800;
+}
+@keyframes blink {
+    50% { opacity: 0; }
+}

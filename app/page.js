@@ -1,8 +1,44 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+    const [isLoading, setIsLoading] = useState(true);
+    const [progress, setProgress] = useState(0);
+    const [typingText, setTypingText] = useState("");
+    const fullText = "Transforming ideas into interactive digital reality.";
+
+    // Preloader Logic
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setProgress(prev => {
+                if (prev >= 100) {
+                    clearInterval(interval);
+                    setTimeout(() => setIsLoading(false), 500);
+                    return 100;
+                }
+                return prev + Math.floor(Math.random() * 15) + 5;
+            });
+        }, 50);
+        return () => clearInterval(interval);
+    }, []);
+
+    // Typewriter Logic
+    useEffect(() => {
+        if (!isLoading) {
+            let i = 0;
+            const typingInterval = setInterval(() => {
+                if (i <= fullText.length) {
+                    setTypingText(fullText.slice(0, i));
+                    i++;
+                } else {
+                    clearInterval(typingInterval);
+                }
+            }, 50);
+            return () => clearInterval(typingInterval);
+        }
+    }, [isLoading]);
+
     useEffect(() => {
         // Year
         document.getElementById('year').textContent = new Date().getFullYear();
@@ -209,6 +245,14 @@ export default function Home() {
 
     return (
         <>
+            {/* Preloader */}
+            <div className={`preloader ${!isLoading ? 'fade-out' : ''}`}>
+                <h1 className="preloader-title">Bảo<span>.Dev</span></h1>
+                <div className="progress-bar-container">
+                    <div className="progress-bar" style={{ width: `${progress}%` }}></div>
+                </div>
+            </div>
+
             <div className="ambient-glow glow-1"></div>
             <div className="ambient-glow glow-2"></div>
             <div className="ambient-glow glow-3"></div>
@@ -240,6 +284,11 @@ export default function Home() {
                             <h2 className="subtitle">
                                 <span className="gradient-text">Frontend Developer</span> & <br/> UI/UX Learner
                             </h2>
+                            <div style={{height: "30px", marginBottom: "1rem"}}>
+                                <p className="description" style={{margin: 0, fontFamily: "monospace", color: "var(--accent-1)", fontSize: "1.05rem"}}>
+                                    &gt; {typingText}<span className="blinking-cursor">|</span>
+                                </p>
+                            </div>
                             <p className="description">
                                 Passionate about crafting beautiful, intuitive, and highly functional web experiences. Based in Vietnam.
                             </p>
@@ -319,6 +368,29 @@ export default function Home() {
                             <div className="skill-card reveal" style={{transitionDelay: "500ms"}}>
                                 <i className="fab fa-git-alt" style={{color: "#f05032"}}></i>
                                 <h3>Git & GitHub</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="hobbies" className="skills-section">
+                    <div className="container pb-section">
+                        <div className="section-header reveal">
+                            <h2 className="section-title">Personal Hobbies</h2>
+                            <div className="line"></div>
+                        </div>
+                        <div className="skills-grid">
+                            <div className="skill-card reveal">
+                                <i className="fas fa-gamepad" style={{color: "#b224ef"}}></i>
+                                <h3>Gaming</h3>
+                            </div>
+                            <div className="skill-card reveal" style={{transitionDelay: "100ms"}}>
+                                <i className="fas fa-book" style={{color: "#00f2fe"}}></i>
+                                <h3>Reading</h3>
+                            </div>
+                            <div className="skill-card reveal" style={{transitionDelay: "200ms"}}>
+                                <i className="fas fa-running" style={{color: "#4facfe"}}></i>
+                                <h3>Sports</h3>
                             </div>
                         </div>
                     </div>

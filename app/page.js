@@ -459,6 +459,25 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+
+                            <div className="project-card reveal" style={{transitionDelay: "450ms"}}>
+                                <div className="project-img">
+                                    <div className="img-overlay">
+                                        <a href="https://github.com/baophong26/Techspace_Web" target="_blank" className="btn-view"><i className="fab fa-github"></i> View GitHub</a>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop" alt="TechSpace Web" />
+                                </div>
+                                <div className="project-info">
+                                    <span className="project-badge" style={{color: "#00f2fe"}}>E-commerce</span>
+                                    <h3>BP TechSpace</h3>
+                                    <p>A modern e-commerce storefront with a premium Cyberpunk aesthetic, high-performance UI/UX, and immersive animations.</p>
+                                    <div className="project-tech">
+                                        <span>Next.js</span>
+                                        <span>React</span>
+                                        <span>UI/UX</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

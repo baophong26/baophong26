@@ -478,6 +478,25 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+
+                            <div className="project-card reveal" style={{transitionDelay: "600ms"}}>
+                                <div className="project-img">
+                                    <div className="img-overlay">
+                                        <a href="https://github.com/Jack0dev/StockLap" target="_blank" className="btn-view"><i className="fab fa-github"></i> View GitHub</a>
+                                    </div>
+                                    <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop" alt="StockLab Project" />
+                                </div>
+                                <div className="project-info">
+                                    <span className="project-badge" style={{color: "#00b4d8"}}>Finance App</span>
+                                    <h3>StockLab</h3>
+                                    <p>A robust financial application featuring secure OTP-based authentication, Redis caching, and rigorous transaction security.</p>
+                                    <div className="project-tech">
+                                        <span>Fullstack</span>
+                                        <span>Security</span>
+                                        <span>Redis</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

@@ -449,9 +449,9 @@ export default function Home() {
                                     <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800&auto=format&fit=crop" alt="Furniture Web" />
                                 </div>
                                 <div className="project-info">
-                                    <span className="project-badge" style={{color: "#ffb703"}}>In Progress</span>
+                                    <span className="project-badge" style={{color: "#4facfe"}}>E-commerce</span>
                                     <h3>Furniture Web</h3>
-                                    <p>An elegant e-commerce platform for a furniture store, currently in development with a focus on modern aesthetic design.</p>
+                                    <p>An elegant e-commerce platform for a furniture store, featuring a modern aesthetic design and a seamless shopping experience.</p>
                                     <div className="project-tech">
                                         <span>Web Design</span>
                                         <span>Frontend</span>
